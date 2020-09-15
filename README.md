@@ -1,5 +1,5 @@
-next-closed-fold.vim
-====================
+next-closed-fold.nvim
+=====================
 
 Jump to closed folds.
 

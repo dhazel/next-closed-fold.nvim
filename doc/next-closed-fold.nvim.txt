@@ -1,7 +1,7 @@
-*next-closed-fold.vim.txt*        fold jumping tool
+*next-closed-fold.nvim.txt*        fold jumping tool
 
 =====================================================================
-OVERVIEW                                   *next-closed-fold.vim*
+OVERVIEW                                  *next-closed-fold.nvim*
 
 Jump to closed folds.
 
