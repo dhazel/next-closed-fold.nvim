@@ -1,7 +1,7 @@
 next-closed-fold.nvim
 =====================
 
-Jump to closed folds.
+Jump to closed folds. (using lua)
 
 Without polluting the jumplist.
 
@@ -11,16 +11,16 @@ Usage
 
 Jump to the next closed fold *down*
 
-    :NextClosedFold('j')
+    :lua require 'next-closed-fold'.nextClosedFold('j')
 
 Jump to the next closed fold *up*
 
-    :NextClosedFold('k')
+    :lua require 'next-closed-fold'.nextClosedFold('k')
 
 Replace the default `zk` and `zj` key mappings
 
-    :nnoremap <silent> zj :call NextClosedFold('j')<cr>
-    :nnoremap <silent> zk :call NextClosedFold('k')<cr>
+    :nnoremap <silent> zj :lua require 'next-closed-fold'.nextClosedFold('j')<cr>
+    :nnoremap <silent> zk :lua require 'next-closed-fold'.nextClosedFold('k')<cr>
 
 If it is desirable for the mappings to accept a count for the number of repetitions
 of the corresponding movement, one can implement a simple function for repeating
@@ -36,8 +36,8 @@ any given command:
 
 and then redefine the above mappings as follows:
 
-    nnoremap <silent> <leader>zj :<c-u>call RepeatCmd('call NextClosedFold("j")')<cr>
-    nnoremap <silent> <leader>zk :<c-u>call RepeatCmd('call NextClosedFold("k")')<cr>
+    nnoremap <silent> <leader>zj :<c-u>call RepeatCmd('lua require 'next-closed-fold'.nextClosedFold("j")')<cr>
+    nnoremap <silent> <leader>zk :<c-u>call RepeatCmd('lua require 'next-closed-fold'.nextClosedFold("k")')<cr>
 
 Installation
 ------------
@@ -48,7 +48,7 @@ this plugin.
 #### Vim-Plug
 
 ```vim
-Plug 'dhazel/next-closed-fold.vim'
+Plug 'dhazel/next-closed-fold.nvim'
 ```
 
 Inspired By
