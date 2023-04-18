@@ -31,7 +31,7 @@ function M.nextClosedFold(direction)
         lineNumber = vim.fn.line('.')
         foldIsOpen = vim.fn.foldclosed(lineNumber) < 0
     end
-    if open then
+    if foldIsOpen then
         vim.fn.winrestview(viewState)
     end
 end
